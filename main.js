@@ -7,7 +7,7 @@ const btnBlack = document.createElement('button');
 const btnGrey = document.createElement('button');
 const btnSize = document.createElement('button');
 
-let loop = (row,col)=> {
+let createDiv = (row,col)=> {
     for (let i = 1; i <= row*col ; i ++){
     const div = document.createElement('div');
     container.appendChild(div);
@@ -20,4 +20,4 @@ let loop = (row,col)=> {
     }
 }
 
-loop(15, 5);
+createDiv(16, 16);
