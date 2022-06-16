@@ -1,6 +1,4 @@
 
-
-
 const container = document.querySelector('.container');
 const buttonsContainer = document.querySelector('.buttons');
 const btnBlack = document.createElement('button');
@@ -20,7 +18,7 @@ let createDiv = (col,row)=> {
     }
 }
 
-createDiv(6,6);
+createDiv( );
 
 
 let greyColor=()=> {
@@ -70,3 +68,25 @@ let rgbColor=()=> {
 }
 
 rgbColor();
+
+
+let reSet=()=> {
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => box.remove());
+}
+
+let boxSize = () =>{
+     btnSize.textContent = 'GridSize'
+     btnSize.addEventListener('click', e =>{
+        let user =  prompt('Please eneter the required rows and colums for the Grid');
+        reSet();
+        createDiv(user, user);
+        greyColor();
+        blackColor();
+        rgbColor();
+       
+     })
+     buttonsContainer.appendChild(btnSize).classList.add('btn');
+}
+
+boxSize();
