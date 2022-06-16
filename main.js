@@ -79,12 +79,25 @@ let boxSize = () =>{
      btnSize.textContent = 'GridSize'
      btnSize.addEventListener('click', e =>{
         let user =  prompt('Please eneter the required rows and colums for the Grid');
+
+        if( user === null || user === ''){
+
+        reSet();
+        createDiv(16,16);
+        greyColor();
+        blackColor();
+        rgbColor();
+    }  
+    else
+        {
         reSet();
         createDiv(user, user);
         greyColor();
         blackColor();
         rgbColor();
        
+    }
+
      })
      buttonsContainer.appendChild(btnSize).classList.add('btn');
 }
