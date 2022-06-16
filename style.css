@@ -20,3 +20,7 @@ section h1 {
     display:grid;
     z-index:100;
 }
+
+.btn{
+    background-color: aqua;
+}
