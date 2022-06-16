@@ -13,6 +13,10 @@ let loop = (row,col)=> {
     container.appendChild(div);
     div.style.border = `1px solid red`;
     container.style.border = `1px solid black`;
+
+    container.style.gridTemplateColumns= `repeat (${col}, 1fr)`;
+    container.style.gridTemplateRows= `repeat (${row}, 1fr)`;
+    container.style.gridTemplateRows.border = `1px solid green`;
     }
 }
 
