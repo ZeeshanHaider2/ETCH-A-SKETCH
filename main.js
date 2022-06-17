@@ -11,14 +11,13 @@ let createDiv = (col,row)=> {
     const div = document.createElement('div');
     container.appendChild(div).classList.add('box');
     div.style.border = `1px solid red`;
-   
     container.style.gridTemplateColumns= `repeat(${col}, 1fr)`;
     container.style.gridTemplateRows= `repeat(${row}, 1fr)`;
     
     }
 }
 
-createDiv( );
+//createDiv( );
 
 
 let greyColor=()=> {
@@ -34,8 +33,9 @@ let greyColor=()=> {
     buttonsContainer.appendChild(btnGrey).classList.add('btn');
 }
 
-greyColor();
+ //greyColor();
 
+ 
 let blackColor= ()=>{
     const boxes = document.querySelectorAll('.box');
     btnBlack.textContent = 'Black';
@@ -49,7 +49,7 @@ let blackColor= ()=>{
     buttonsContainer.appendChild( btnBlack).classList.add('btn');
 }
 
-blackColor();
+//blackColor();
 
 let rgbColor=()=> {
     const boxes = document.querySelectorAll('.box');
@@ -67,7 +67,7 @@ let rgbColor=()=> {
     buttonsContainer.appendChild(btnRGB).classList.add('btn');
 }
 
-rgbColor();
+//rgbColor();
 
 
 let reSet=()=> {
@@ -80,7 +80,7 @@ let boxSize = () =>{
      btnSize.addEventListener('click', e =>{
         let user =  prompt('Please eneter the required rows and colums for the Grid');
 
-        if( user === null || user === ''){
+        if( user === null || user < 1 ){
 
         reSet();
         createDiv(16,16);
