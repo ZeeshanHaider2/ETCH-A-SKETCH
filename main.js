@@ -35,7 +35,7 @@ let greyColor=()=> {
 
  //greyColor();
 
- 
+
 let blackColor= ()=>{
     const boxes = document.querySelectorAll('.box');
     btnBlack.textContent = 'Black';
